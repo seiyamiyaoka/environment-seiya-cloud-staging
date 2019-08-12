@@ -1,0 +1,50 @@
+Step: step-credential-initializer-tcx97:
+
+{"level":"warn","ts":1565594271.7341948,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1565594271.7364984,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Step: step-working-dir-initializer-lvtsh:
+
+{"level":"warn","ts":1565594272.694949,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1565594272.6966317,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+Step: step-place-tools:
+
+Step: step-git-source-meta-************-environment-s-6mbpf:
+
+{"level":"warn","ts":1565594277.7308047,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1565594277.906364,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/************/environment-seiya-cloud-staging.git @ 5842ba4f4d296cfb7a85f9b269510e70ea2f0c57 in path /workspace/source"}
+Step: step-git-merge:
+
+{"level":"info","msg":"Using SHAs from PULL_REFS=master:5842ba4f4d296cfb7a85f9b269510e70ea2f0c57,1:40c459dd4a00c4fc9fba73a76ed34ca107626a23","time":"2019-08-12T07:17:58Z"}
+{"level":"debug","msg":"ran git fetch --unshallow origin 40c459dd4a00c4fc9fba73a76ed34ca107626a23: 5842ba4f4d296cfb7a85f9b269510e70ea2f0c57: in ","time":"2019-08-12T07:17:58Z"}
+{"level":"debug","msg":"ran git checkout master in ","time":"2019-08-12T07:17:58Z"}
+{"level":"debug","msg":"ran git reset --hard 5842ba4f4d296cfb7a85f9b269510e70ea2f0c57 in ","time":"2019-08-12T07:17:58Z"}
+{"level":"debug","msg":"ran clean --force -d . in ","time":"2019-08-12T07:17:58Z"}
+{"level":"debug","msg":"ran git merge 40c459dd4a00c4fc9fba73a76ed34ca107626a23 in ","time":"2019-08-12T07:17:58Z"}
+MERGED SHA SUBJECT
+40c459dd4  chore: Promote jenkinsxprac to version 0.0.1
+Step: step-merge-pull-refs:
+
+{"level":"debug","msg":"ran git fetch origin 40c459dd4a00c4fc9fba73a76ed34ca107626a23: 5842ba4f4d296cfb7a85f9b269510e70ea2f0c57: in ","time":"2019-08-12T07:17:59Z"}
+{"level":"debug","msg":"Unshallowed git repo in ","time":"2019-08-12T07:17:59Z"}
+{"level":"debug","msg":"ran git checkout master in ","time":"2019-08-12T07:17:59Z"}
+{"level":"debug","msg":"ran git reset --hard 5842ba4f4d296cfb7a85f9b269510e70ea2f0c57 in ","time":"2019-08-12T07:17:59Z"}
+{"level":"debug","msg":"ran clean --force -d . in ","time":"2019-08-12T07:17:59Z"}
+{"level":"debug","msg":"ran git merge 40c459dd4a00c4fc9fba73a76ed34ca107626a23 in ","time":"2019-08-12T07:17:59Z"}
+MERGED SHA SUBJECT
+40c459dd4  chore: Promote jenkinsxprac to version 0.0.1
+Step: step-create-effective-pipeline:
+
+{"level":"info","msg":"Deleting and cloning the Jenkins X versions repo","time":"2019-08-12T07:18:00Z"}
+{"level":"info","msg":"Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions","time":"2019-08-12T07:18:00Z"}
+{"level":"info","msg":"selected pack: /builder/home/.**/draft/packs/github.com/jenkins-x-buildpacks/jenkins-x-kubernetes/packs/environment","time":"2019-08-12T07:18:00Z"}
+{"level":"info","msg":"Effective pipeline written to jenkins-x-promotion-build-effective.yml","time":"2019-08-12T07:18:02Z"}
+Step: step-create-tekton-crds:
+
+{"level":"info","msg":"PipelineActivity for ************-environment-seiya-cloud-staging-PR-1-1","time":"2019-08-12T07:18:02Z"}
+{"level":"info","msg":"Applying changes ","time":"2019-08-12T07:18:02Z"}
+{"level":"info","msg":"Checking if batch build reconciling is needed","time":"2019-08-12T07:18:02Z"}
+{"level":"info","msg":"upserted PipelineResource ************-environment-seiya for the git repository https://github.com/************/environment-seiya-cloud-staging.git and branch PR-1","time":"2019-08-12T07:18:02Z"}
+{"level":"info","msg":"upserted Task ************-environment-seiya-from-build-pack-1","time":"2019-08-12T07:18:02Z"}
+{"level":"info","msg":"upserted Pipeline ************-environment-seiya-1","time":"2019-08-12T07:18:02Z"}
+{"level":"info","msg":"created PipelineRun ************-environment-seiya-1","time":"2019-08-12T07:18:02Z"}
+{"level":"info","msg":"created PipelineStructure ************-environment-seiya-1","time":"2019-08-12T07:18:02Z"}
