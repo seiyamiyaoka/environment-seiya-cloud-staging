@@ -18,7 +18,7 @@ expose:
   - --v
   - 4
   config:
-    domain: seiya.cloud
+    domain: 54.213.161.185.nip.io
     exposer: Ingress
     http: "true"
 jenkins:
